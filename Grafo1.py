@@ -128,11 +128,3 @@ class Grafo_dirigido(Grafo):
             aux = v.vizinhos_saintes
             v.vizinhos_saintes = v.vizinhos_entrantes
             v.vizinhos_entrantes = aux
-
-    
-
-grafo = Grafo()
-with open('facebook_santiago.net', 'r') as arquivo:
-    info = arquivo.read()
-    info = info.split('\n')
-    grafo.lerArquivo(info)
