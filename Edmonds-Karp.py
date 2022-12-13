@@ -22,6 +22,8 @@ def Edmonds_Karp(G, s, t, Gf):
                     while w != s:
                         w = A[w.id]
                         p.insert(0, w)
+                    return p
+                Q.append(v)
     return True
 
 
@@ -53,4 +55,4 @@ for v in grafo.V:
     t = grafo.V[v]
 
 
-Edmonds_Karp(grafo, s, t, grafoF)
+print(Edmonds_Karp(grafo, s, t, grafoF))
